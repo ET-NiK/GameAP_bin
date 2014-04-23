@@ -134,8 +134,8 @@ chown -R gameap:gameap $path
 chown -R gameap:gameap $steamcmd_path
 
 # Конфигурирование SSH сервера
-cp sshd_config sshd_config_backup
-sed 's/^AllowUsers .*$/& gameap/' /etc/ssh/sshd_config_backup >sshd_config
+cp /etc/ssh/sshd_config /etc/ssh/sshd_config_backup
+sed 's/^AllowUsers .*$/& gameap/' /etc/ssh/sshd_config_backup >/etc/ssh/sshd_config
 service ssh restart
 
 echo "gameap ALL = NOPASSWD: $path/server.sh" >> /etc/sudoers
