@@ -128,7 +128,7 @@ done
 
 groupadd gameap
 useradd -d $path -s /bin/bash -g gameap gameap
-echo "gameap:{$PASS}"|chpasswd
+echo "gameap:$PASS"|chpasswd
 
 chown -R gameap:gameap $path
 chown -R gameap:gameap $steamcmd_path
