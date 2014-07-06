@@ -47,7 +47,7 @@ fi
 if [[ ! `rpm -qa | grep ^screen` ]]
 	then
 		echo -e "Утилита screen не установлена, будет выполнена установка"
-		apt-get install screen
+		yum install screen
 fi
 
 while [ "$path" == "" ]
