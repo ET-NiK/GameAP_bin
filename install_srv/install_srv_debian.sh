@@ -2,8 +2,8 @@
 
 OS=`lsb_release -i | cut -f2`
 
-if [ $OS != "Debian" ] && [ $OS != "Ubuntu" ]; then
-	echo "Установка возможна лишь на операционные системы Debian, Ubuntu. Воспользуйтесь другим скриптом для вашей ос ($OS)."
+if [ $OS != "Debian" ] && [ $OS != "Ubuntu" ] && [ $OS != "Mint" ]; then
+	echo "Установка возможна лишь на операционные системы Debian, Ubuntu, Mint. Воспользуйтесь другим скриптом для вашей ос ($OS)."
 	exit 0
 fi
 
